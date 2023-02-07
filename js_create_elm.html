@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1 id="heading">Welcome to nikku world</h1>
+    <div class="child red good" id="myfirst">
+        child 
+        <ul class="this" id="myul">
+            <li class="childul" id="fui">This</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul" id="lui">of my dreams</li>
+        </ul>
+    </div>
+    <div class="child">child2</div>
+    <div class="child">child3</div>
+    <div class="child">child4</div>
+</div>
+<script>
+   let element = document.createElement('li')
+
+//    add a class name to the li element
+   element.className = 'childul';
+   element.id = 'nikku';
+   element.setAttribute('title','my title')
+   element.innerHTML='<b>This is a nikku</b>'
+   console.log(element);  
+   
+   let ul = document.querySelector('ul.this')
+   ul.appendChild(element)
+   console.log(ul)
+
+
+
+//    replace the element
+let elem2 = document.createElement('h3');
+elem2.id ='elem2'
+elem2.className  = 'elem2'
+let tnode =document.createTextNode('This is created node for elem2');
+elem2.appendChild(tnode);
+
+element.replaceWith('elem2');
+let myul = document.getElementById('myul');
+myul.replaceChild(element,document.getElementById('fui'))
+// console.log(elem2)
+</script>
+   
+</body>
+</html>

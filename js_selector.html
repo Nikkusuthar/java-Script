@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Selector</title>
+</head>
+<body>
+    <div id="home"  class="container">
+        <h1>Something</h1>
+        <p class="per" id="per1" name="som">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vitae.</p>
+        <p class="per" id="per2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vitae.</p>
+        <p class="per" id="per3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vitae.</p>
+        <p class="per" id="per4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vitae.</p>
+        <p class="per" id="per5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, vitae.</p>
+        <input type="text" >
+        <h2 class="heading">done</h2>
+    </div>
+    <script>
+        // let element = document.getElementById("per1")
+        // element= element.childNodes
+        // element = element.parentNode
+        // element.innerText ="Kuch Bhi"
+        // element.innerHTML = "<b> Kuch nhi </b>"
+        // console.log(element)
+             
+        // let cell = document.querySelector("#home")
+        // cell = document.querySelector(".heading")
+        // cell = document.querySelector("div")
+        // cell.style.color = "red"
+        //  let multy = document.getElementsByClassName('per')
+        //      multy.style.color ="red"
+           
+        let multy2 = document.getElementsById('per1')
+            console.log(multy2)
+            multy2.innerHTML = "nikku"
+    </script>
+    
+</body>
+</html>

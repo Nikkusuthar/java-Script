@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script Event</title>
+</head>
+<body>
+    <h1 id="heading">
+        This is java script heading
+    </h1>
+    <script>
+        console.log('This is a java script Event')
+
+        // document.getElementById('heading'),addEventListener
+        // ('click',function () {
+        //     console.log('you have clicked the heading')
+        // })
+         
+        document.getElementById('heading').addEventListener
+        ('click',function (e) {
+            let variable;
+            variable = e.target;
+            variable  = e.target.className;
+            variable = e.target.id;
+            variable = e.offsetX
+            // variable = Array.from(e.target.classlist);   
+            console.log(variable)
+
+        })
+    </script>
+</body>
+</html>

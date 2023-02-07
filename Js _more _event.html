@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script more Event
+    </title>
+    <style>
+        .container{
+            width: 100%;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    name: <input type="text">
+    <input type="button" value="Datastore" id="btn"> 
+</div>
+    <script>
+        // let btn =   document.getElementById('btn')
+        // btn.addEventListener('click',func1)
+        // function func1(e) {
+        //     console.log("Thanks",e)
+        //     e.preventDefault();
+        // }
+       
+        document.querySelector('.container')
+        .addEventListener('mousemove',function(e){
+            console.log(e.offsetX, e.offsetY);
+            document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY},154)`;
+            console.log("You Triggerd mouse move event")
+        })
+        
+    </script>
+</body>
+</html>
