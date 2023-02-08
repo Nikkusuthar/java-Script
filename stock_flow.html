@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Register as user</h3>
+    <form method="POST" action="Register.jsp" onsubmit="return validate(this);">
+        <ul>
+            <li>First Name:
+                <input type="text" name="firstName">
+            </li>
+            <li>Last Name:
+                <input type="text" name="lastName">
+            </li>
+            <li>Email Address:
+                <input type="email" name="email">
+            </li>
+            <li>Gender: Male
+                <input type="radio" name="sex" value="male">Female
+                <input type="radio" name="sex" value="female">
+            </li>
+            <li>User Name
+                <input type="text" name="username">
+            </li>
+            <li>Password
+                <input type="password" name="password">
+            </li>
+
+            <li>You must be 12 or over to register to this web site. Please check if you are over 12:
+                <input type="checkbox" name="age">
+            </li>
+            <li>Please check this box to agree to the Terms and Conditions
+                <input type="checkbox" name="agreement">
+            </li>
+        </ul>
+        <br />
+        <input type="submit" value="Register">
+    </form>
+    <script>
+        var validate = function (form) {
+            var errors = [];
+            if (!form.sex[0].checked && !form.sex[1].checked) {
+                errors.push('Please select a gender');
+            }
+            if (!form.agreement.checked) {
+                errors.push('Please agree to T&C');
+            }
+            if (errors.length) {
+                alert(errors.join('\n'));
+                return false;
+            }
+            return true;
+        };
+    </script>
+</body>
+
+</html>

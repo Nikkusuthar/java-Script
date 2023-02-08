@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation in js</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        .container {
+            width: 700px;
+            margin: 0 auto;
+            background-color: blueviolet;
+        }
+
+        input {
+            padding: 10px 50px;
+        }
+
+        h1 {
+            color: aqua;
+        }
+
+        input {
+            width: 200px;
+            /* margin: 10px; */
+        }
+
+        p {
+            color: red;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <form action="" onsubmit="return validform()">
+            <input type="text" name="" id="username" placeholder="enter your user name"> <br>
+            <p id="usererror"></p>
+            <input type="password" name="" id="password" placeholder="Enter your password"> <br>
+            <p id="passerror"></p>
+            <input type="number" name="" id="Age" placeholder="Enter your Age"><br>
+            <p id="Ageerror"></p>
+            <input type="tel" name="" id="Number" placeholder="Enter your mobile Number"><br>
+            <p id="Numbererror"></p>
+            <input type="submit" value="save data">
+        </form>
+    </div>
+    <script>
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let Age = document.getElementById('Age')
+        let Number = document.getElementById('Number')
+        let done = 1
+
+        function validform() {
+            if (username.value == "") {
+                document.getElementById('usererror').innerHTML = 'Must be Requerd'
+                done = 0
+            }
+            else if (username.value.length < 8) {
+                document.getElementById('usererror').innerHTML = 'maximun 8 ctr requard'
+                done = 0
+            }
+            else {
+                document.getElementById('usererror').innerHTML = ''
+                done = 1
+            }
+            if (password.value == "") {
+                document.getElementById('passerror').innerHTML = 'Please Enter your password'
+                done = 0
+            }
+            else if (password.value.length < 8) {
+                document.getElementById('passerror').innerHTML = 'Enter your password about 8 Digit'
+                done = 0
+            }
+            else {
+                document.getElementById('passerror').innerHTML = ''
+                done = 1
+            }
+            if (Age.value == "") {
+                document.getElementById('Ageerror').innerHTML = "Age Requard"
+                done = 0
+            }
+            else if (Age.value < 18) {
+                document.getElementById('Ageerror').innerHTML = "not for less than 18 year old"
+                done = 0
+            }
+            else if (Age.value < 60) {
+                document.getElementById('Ageerror').innerHTML = ""
+                done = 0
+            }
+            else {
+                document.getElementById('Ageerror').innerHTML = "not applicable for 60+ year old"
+                done = 1
+            }
+
+            if (Number.value == "") {
+                document.getElementById('Numbererror').innerHTML = "Please fill Mobile Number"
+                done = 0
+            }
+            else if(isNaN(Number.value)){
+                document.getElementById('Numbererror').innerHTML="Enter Only Number Value"
+                done = 0
+            }
+            else if (Number.value.length<10) {
+                document.getElementById('Numbererror').innerHTML = "Mobile Number must be 10 digit"
+                done = 0
+            }
+            else if (Number.value.length>10) {
+                document.getElementById('Numbererror').innerHTML = "Mobile Number must be 10 digit"
+                done = 0
+            }
+            else {
+                document.getElementById('Numbererror').innerHTML = ""
+                done = 1
+            }
+            if (done) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+    </script>
+</body>
+
+</html>
