@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check a number odd and even</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter your number")
+        a = parseInt(a)
+        // if (a%2 == 0) {
+        //     document.write(`${a} is even Number`)
+        // }
+        // else{
+        //     document.write(`${a} is a odd Number`)
+        // }
+        let res = a%2 == 0 ? "Even" : "Odd"
+        document.write(`${a} is an ${res} Number`)
+    </script>
+</body>
+</html>
